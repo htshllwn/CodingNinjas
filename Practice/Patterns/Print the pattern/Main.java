@@ -30,18 +30,20 @@ public class Main {
         printPattern(n);
     }
 
-	/* Input
-	 * n - number of rows */
-	public static void printPattern(int n){
+    /*
+     * Input n - number of rows
+     */
+    public static void printPattern(int n) {
 
         // Write your code here
-        int [][] result = new int[n][n];
+        int[][] result = new int[n][n];
 
         for (int i = 0, j = n - 1, k = 1; i <= j; i++, j--) {
             for (int l = 0; l < n; l++, k++) {
                 result[i][l] = k;
             }
-            if (i == j) break;
+            if (i == j)
+                break;
             for (int l = 0; l < n; l++, k++) {
                 result[j][l] = k;
             }
@@ -53,6 +55,6 @@ public class Main {
             }
             System.out.println();
         }
-	}
-	
+    }
+
 }
