@@ -25,14 +25,10 @@ class Main {
 
     public static int duplicate(int[] arr){
         int[] countArr = new int[arr.length];
-        int result = -1;
         for(int e: arr) {
             countArr[e]++;
-            if (countArr[e] > 1) {
-                result = e;
-                break;
-            }
+            if (countArr[e] > 1) return e;
         }
-        return result;
+        return -1;
 	}
 }
