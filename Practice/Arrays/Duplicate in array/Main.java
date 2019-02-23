@@ -17,12 +17,8 @@
 // Sample Output:
 // 7
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         int[] arr = { 0, 7, 2, 5, 4, 7, 1, 3, 6 };
         System.out.println(duplicate(arr));
     }
@@ -30,10 +26,10 @@ class Main {
     public static int duplicate(int[] arr){
         int[] countArr = new int[arr.length];
         int result = -1;
-        for (int i = 0; i < arr.length; i++) {
-            countArr[arr[i]]++;
-            if (countArr[arr[i]] > 1) {
-                result = arr[i];
+        for(int e: arr) {
+            countArr[e]++;
+            if (countArr[e] > 1) {
+                result = e;
                 break;
             }
         }
