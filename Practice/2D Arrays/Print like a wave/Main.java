@@ -12,16 +12,12 @@
 
 public class Main {
     public static void main(String[] args) {
-        int input[][] = {
-            {1, 2, 3, 4},
-            {5, 6, 7, 8},
-            {9, 10, 11, 12}
-        };
+        int input[][] = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 } };
 
         wavePrint(input);
     }
 
-    public static void wavePrint(int input[][]){
+    public static void wavePrint(int input[][]) {
         int c = 0;
         for (int j = 0; j < input[0].length; j++) {
             for (int i = 0; i < input.length; i++) {
@@ -29,5 +25,5 @@ public class Main {
             }
             c = c == 0 ? input.length - 1 : 0;
         }
-	}
+    }
 }
