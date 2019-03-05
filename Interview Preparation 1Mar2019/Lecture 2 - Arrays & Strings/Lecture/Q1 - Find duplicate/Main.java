@@ -1,3 +1,4 @@
+
 // Given an array of integers of size n which contains numbers from 0 to n - 2. 
 // Each number is present at least once. 
 // That is, if n = 5, numbers from 0 to 3 is present in the given array 
@@ -37,17 +38,19 @@ public class Main {
         }
 
         // One Line Solution for reading space separated integers as array for reference
-        // int[] arr = Arrays.stream(reader.readLine().split("\\s")).mapToInt(Integer::parseInt).toArray();
+        // int[] arr =
+        // Arrays.stream(reader.readLine().split("\\s")).mapToInt(Integer::parseInt).toArray();
 
         System.out.println(duplicate(arr));
     }
 
-    public static int duplicate(int[] arr){
+    public static int duplicate(int[] arr) {
         int[] countArr = new int[arr.length];
-        for(int e: arr) {
+        for (int e : arr) {
             countArr[e]++;
-            if (countArr[e] > 1) return e;
+            if (countArr[e] > 1)
+                return e;
         }
         return -1;
-	}
+    }
 }
