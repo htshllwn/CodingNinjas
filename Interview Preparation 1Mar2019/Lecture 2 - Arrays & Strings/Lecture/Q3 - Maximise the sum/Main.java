@@ -50,7 +50,7 @@ public class Main {
     }
 
     public static long maximumSumPath(int[] input1, int[] input2) {
-        int result = 0;
+        long result = 0;
         int[] smaller = input1.length < input2.length ? input1 : input2;
         int[] larger = input1.length < input2.length ? input2 : input1;
         List<int[]> commons = new ArrayList<int[]>();
@@ -60,13 +60,13 @@ public class Main {
         for (int i = 0, j = 0; i < smaller.length; i++) {
             int index = findElement(larger, smaller[i], j);
             if (index > -1) {
-                commons.add(new int[]{i, index});
+                commons.add(new int[] { i, index });
                 j = index + 1;
             }
         }
-        commons.add(new int[]{smaller.length - 1, larger.length - 1});
+        commons.add(new int[] { smaller.length - 1, larger.length - 1 });
 
-        int[] prev = {-1, -1};
+        int[] prev = { -1, -1 };
         for (int[] e : commons) {
             result += calcLargestSum(sumSmaller, sumLarger, e, prev);
             prev = e;
