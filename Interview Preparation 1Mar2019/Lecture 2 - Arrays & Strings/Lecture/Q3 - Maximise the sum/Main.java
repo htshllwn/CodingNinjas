@@ -95,7 +95,7 @@ public class Main {
 
     public static long[] calcSumArr(int[] arr) {
         long[] sum = new long[arr.length];
-        int tempSum = 0;
+        long tempSum = 0;
         for (int i = 0; i < arr.length; i++) {
             tempSum += arr[i];
             sum[i] = tempSum;
