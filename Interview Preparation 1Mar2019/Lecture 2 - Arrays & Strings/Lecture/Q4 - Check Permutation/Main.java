@@ -24,8 +24,6 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.HashMap;
-import java.util.Map;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -45,11 +43,12 @@ public class Main {
         int[] counts1 = countsArray(input1);
         int[] counts2 = countsArray(input2);
         for (int i = 0; i < counts1.length; i++) {
-            if (counts1[i] != counts2[i]) return false;
+            if (counts1[i] != counts2[i])
+                return false;
         }
         return true;
     }
-    
+
     public static int[] countsArray(String str) {
         int lb = 97;
         int[] counts = new int[26];
