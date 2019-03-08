@@ -50,13 +50,9 @@ public class Main {
     }
 
     public static int[] countsArray(String str) {
-        int lb = 97;
         int[] counts = new int[26];
         for (int i = 0; i < str.length(); i++) {
-            char c = str.charAt(i);
-            int ascii = (int) c;
-            int index = ascii - lb;
-            counts[index] += 1;
+            counts[str.charAt(i) - 'a']++;
         }
         return counts;
     }
