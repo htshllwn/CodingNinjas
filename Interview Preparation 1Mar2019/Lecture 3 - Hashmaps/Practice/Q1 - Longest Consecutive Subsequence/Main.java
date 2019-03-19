@@ -36,7 +36,7 @@ public class Main {
         int[] arr = Arrays.stream(reader.readLine().split("\\s")).mapToInt(Integer::parseInt).toArray();
         ArrayList<Integer> result = longestSubsequence(arr);
         for (int v : result) {
-            System.out.println(v);
+            System.out.print(v + " ");
         }
     }
 
