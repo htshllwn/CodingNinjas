@@ -47,7 +47,6 @@ public class Main {
         while (res != null) {
             System.out.print(res.data + " ");
             res = res.next;
-            
         }
         System.out.println();
     }
